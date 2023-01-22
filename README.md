@@ -33,3 +33,13 @@ function View1Ctrl(myData){
     }
 });
 ```
+
+***
+#### _Summary_
+* `resolve` property can be used to inject values directly into the controller responsible for the state.
+* If `resolve` property is a promise
+    * router will wait for it to resolve before transitioning to the state;
+    * if rejected, router will not transition to the new state at all.
+* The name of the key in the resolve's property object is what is to be injected into the corresponding controller's function.
+* `resolve` can have properties that contain anything: objects, strings, etc.
+***
